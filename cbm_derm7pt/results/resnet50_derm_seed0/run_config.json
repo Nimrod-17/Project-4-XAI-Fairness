@@ -1,0 +1,58 @@
+{
+  "args": {
+    "data_dir": "../release_v0",
+    "features": [
+      "features/resnet50_derm.npz"
+    ],
+    "run_name": null,
+    "seed": 0,
+    "hidden_dim": 256,
+    "dropout": 0.3,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "joint_lambda": 1.0,
+    "no_class_weights": false,
+    "n_random_orders": 20,
+    "no_plots": false
+  },
+  "train_config": {
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 64,
+    "max_epochs": 500,
+    "patience": 40,
+    "hidden_dim": 256,
+    "dropout": 0.3,
+    "joint_lambda": 1.0,
+    "class_weights": true,
+    "device": "cpu",
+    "verbose": true
+  },
+  "training": {
+    "g": {
+      "best_epoch": 2,
+      "best_val_loss": 1.3145291805267334
+    },
+    "independent": {
+      "best_epoch": 169,
+      "best_val_loss": 1.1923741102218628
+    },
+    "sequential": {
+      "best_epoch": 174,
+      "best_val_loss": 1.42432701587677
+    },
+    "joint": {
+      "best_epoch": 10,
+      "best_val_loss": 2.763730525970459
+    },
+    "black_box": {
+      "best_epoch": 1,
+      "best_val_loss": 2.0181796550750732
+    }
+  },
+  "split_sizes": {
+    "train": 413,
+    "valid": 203,
+    "test": 395
+  }
+}

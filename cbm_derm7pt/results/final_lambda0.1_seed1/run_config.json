@@ -1,0 +1,75 @@
+{
+  "args": {
+    "data_dir": "../release_v0",
+    "features": [
+      "features/dinov2_vitb14_derm.npz"
+    ],
+    "run_name": "final_lambda0.1_seed1",
+    "seed": 1,
+    "hidden_dim": 256,
+    "dropout": 0.3,
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "joint_lambda": 0.1,
+    "no_class_weights": false,
+    "n_random_orders": 20,
+    "no_plots": true,
+    "bb_lr": 0.0001,
+    "bb_weight_decay": 0.0001,
+    "bb_hidden_dim": 0,
+    "bb_dropout": 0.6
+  },
+  "train_config": {
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "batch_size": 64,
+    "max_epochs": 500,
+    "patience": 40,
+    "hidden_dim": 256,
+    "dropout": 0.3,
+    "joint_lambda": 0.1,
+    "class_weights": true,
+    "device": "cpu",
+    "verbose": true
+  },
+  "black_box_config": {
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "batch_size": 64,
+    "max_epochs": 500,
+    "patience": 40,
+    "hidden_dim": 0,
+    "dropout": 0.6,
+    "joint_lambda": 0.1,
+    "class_weights": true,
+    "device": "cpu",
+    "verbose": true
+  },
+  "training": {
+    "g": {
+      "best_epoch": 5,
+      "best_val_loss": 0.778452455997467
+    },
+    "independent": {
+      "best_epoch": 189,
+      "best_val_loss": 1.18549382686615
+    },
+    "sequential": {
+      "best_epoch": 406,
+      "best_val_loss": 1.2870416641235352
+    },
+    "joint": {
+      "best_epoch": 68,
+      "best_val_loss": 1.3773432970046997
+    },
+    "black_box": {
+      "best_epoch": 242,
+      "best_val_loss": 1.1331478357315063
+    }
+  },
+  "split_sizes": {
+    "train": 413,
+    "valid": 203,
+    "test": 395
+  }
+}

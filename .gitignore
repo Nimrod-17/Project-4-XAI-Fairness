@@ -1,0 +1,17 @@
+# Dataset: download separately from http://derm.cs.sfu.ca (not redistributable)
+release_v0/
+*.zip
+
+# Official derm7pt repository (separate git repo, reference only)
+derm7pt/
+
+# Python
+__pycache__/
+*.pyc
+
+# Large or regenerable outputs
+cbm_derm7pt/results/**/models.pt
+cbm_derm7pt/results/sweep_*/
+
+# Office temporary files
+~$*
